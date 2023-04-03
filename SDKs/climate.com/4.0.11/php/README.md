@@ -1,0 +1,102 @@
+# openapi/openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Composer
+
+To install the SDK first add the below to your `composer.json` file:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "github",
+            "url": "<UNSET>.git"
+        }
+    ],
+    "require": {
+        "openapi/openapi": "*"
+    }
+}
+```
+
+Then run the following command:
+
+```bash
+composer update
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+
+### boundaries
+
+* `fetchBoundaries` - Retrieve Boundaries in batch
+* `fetchBoundaryById` - Retrieve a Boundary by ID
+* `uploadBoundary` - Upload a boundary
+
+### exports
+
+* `fetchExportContentsById` - Retrieve the binary contents of a processed export request.
+* `fetchExportStatusById` - Retrieve the status of an Export.
+* `postExport` - Initiate a new export request.
+
+### farmOrganizations
+
+* `fetchFarmOrganizationByTypeAndId` - Retrieve a specific farm organization by organization type and ID
+
+### fields
+
+* `fetchAllFields` - Retrieve list of all Fields the user has access to.
+* `fetchFieldById` - Retrieve a specific Field by ID
+* `fetchFields` - Retrieve list of Fields
+
+### layers
+
+* `getV4LayersAsApplied` - Retrieve a list of application activities
+* `getV4LayersAsAppliedActivityIdContents` - Retrieve the raw application activity
+* `getV4LayersAsHarvested` - Retrieve a list of harvest activities
+* `getV4LayersAsHarvestedActivityIdContents` - Retrieve the raw harvest activity
+* `getV4LayersAsPlanted` - Retrieve a list of planting activities
+* `getV4LayersAsPlantedActivityIdContents` - Retrieve the raw planting activity
+* `getV4LayersScoutingObservations` - Retrieve a list of scouting observations
+* `getV4LayersScoutingObservationsScoutingObservationId` - Retrieve individual scouting observation
+* `getV4LayersScoutingObservationsScoutingObservationIdAttachments` - Retrieve attachments associated with a given scouting observation.
+* `getV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContents` - Retrieve the binary contents of a scouting observation’s attachment.
+
+### operations
+
+* `fetchOperations` - Retrieve the operations accessible to a a given user.
+
+### resourceOwners
+
+* `getResourceOwner` - Retrieve a resource owner by ID
+
+### uploads
+
+* `chunkedUpload` - Chunked upload of data
+* `fetchUploadStatusById` - Retrieve Upload status
+* `fetchUploadStatuses` - Retrieve Upload statuses in batch
+* `postUpload` - Initiate a new upload
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
